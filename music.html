@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Music website</title>
+	<style>
+	*{
+	margin:0;
+	padding:0;
+	}
+	header{
+	height:60px;
+	background:#262626;
+	padding:0 50px;
+	}
+	.iTunes{
+	width:30%;
+	float:left;
+	color:#fff;
+	font-weight:bold;
+	text-transform:uppercase;
+	line-height:60px;
+	font-size:35px;
+	font-family:sans-serif;
+	}
+	nav{
+	width:68%;
+	float:right;
+	}
+	nav ul{
+	list-style:none;
+	float:right;
+	}
+	nav ul li{
+	display: inline-block;
+	}
+	nav ul li a{
+	text-decoration: none;
+	color:#fff;
+	font-family:sans-serif;
+	font-weight:bold;
+	margin:0 10px;
+	line-height:60px;
+	text-transform:uppercase;
+	}
+	
+	
+	footer{
+	background:#000;
+	color:#fff;
+	padding:15px 50px;
+	text-align:center;
+	}
+
+	   
+	   
+	   @media (max-width: 600px){        
+
+	header {
+	 width: 100%;
+	 height: 100%;
+	 padding: 0;
+	 text-align: center;
+	}
+	.iTunes {
+	 width: 100%;
+	 float: none;
+	}
+	nav {
+	 width: 100%;
+	 float: none;
+	}
+	nav ul li {
+	 display: block;
+	}
+	nav ul {
+	 float: none;
+	}
+	   }    
+
+
+
+	</style>
+</head>
+<body>
+
+	<header>
+		<div class="iTunes">
+		     iTunes
+		</div>
+		<nav>
+			<ul>
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">About</a>
+				</li>
+				<li>
+					<a href="#">Search</a>
+				</li>
+				<li>
+					<a href="#">Your library</a>
+				</li>
+				<li>
+					<a href="#">Premium</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<style>
+body {
+  background-image: url('headphone.jpg');
+  
+}
+</style>
+<div class="right-col">
+<p><h1 style= "color:white;"><i>Music is the soundtrack of your life</i>
+                              <br>-DICK CLARCK </h1></p>
+
+<p style="text-align:center;"><img src="play.jpg" height="150" width="150" id="icon"></p>
+</div>
+
+<audio id="mySong">
+<source src="C:\Users\user\Downloads\Simbai & Frizzy The Streetz - Crazy [NCS Release].mp3" type="audio/mpeg">
+</audio>
+
+<script>
+var mySong= document.getElementById("mySong");
+var icon= document.getElementById("icon");
+icon.onclick=function(){
+if(mySong.paused){
+mySong.play();
+icon.src= "pause.jpg";
+}
+else{
+mySong.pause();
+icon.src="play.jpg";
+}
+}
+</script>
+
+	
+
+</html>
